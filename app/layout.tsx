@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Manrope, Sora } from 'next/font/google'
+import { Public_Sans, Manrope, Sora, Plus_Jakarta_Sans } from 'next/font/google'
 import "./globals.css";
 
 const manrope = Manrope({
@@ -9,6 +9,16 @@ const manrope = Manrope({
 
 const sora = Sora({
   variable: "--font-sora",
+  subsets: ["latin"],
+})
+
+const publicSans = Public_Sans({
+  variable: "--font-public-sans",
+  subsets: ["latin"],
+})
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  variable: "--font-plus-jakarta-sans",
   subsets: ["latin"],
 })
 
@@ -25,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${manrope.variable} ${sora.variable} antialiased`}
+        className={`${publicSans.variable} ${plusJakartaSans.variable} ${manrope.variable} ${sora.variable} antialiased`}
       >
         {children}
       </body>

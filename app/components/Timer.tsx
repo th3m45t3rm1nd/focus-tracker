@@ -1,5 +1,6 @@
-import { useState } from "react"
+import { use, useState } from "react"
 import TimerButtons from "./TimerButtons"
+import TimerOptions from "./TimerOptions";
 export default function Timer() {
   const [timeLeft, setTimeLeft] = useState(3);
   const [isRunning, setIsRunning] = useState(false);
@@ -44,10 +45,9 @@ export default function Timer() {
   const secStr = String(sec).padStart(2, "0");
 
   return (
-    <div className="m-4 p-4 border-2 border-solid flex items-center justify-center flex-col">
-      <h1 className="font-mono text-4xl text-center">Timer</h1>
-      <h3 className="text-5xl font-mono font-bold">{minStr}:{secStr}</h3>
-
+    <div className="bg-green-300 shadow-[4px_6px_0_0] rounded-lg m-4 p-4 border-3 border-solid flex items-center justify-center flex-col ">
+      <TimerOptions />
+      <h3 className="text-9xl font-mono font-semibold py-9 [font-variant-numeric:tabular-nums]">{minStr}:{secStr}</h3>
       <TimerButtons
         onStart={startTimer}
         onPause={pauseTimer}

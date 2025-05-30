@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #b1cacf;
-  --foreground: #00378e;
+  --background: #efd6fe;
+  --foreground: #212121;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-manrope);
+  --font-sans: var(--font-plus-jakarta-sans);
   --font-mono: var(--font-sora);
 }
 
@@ -22,6 +22,6 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Manrope, Sora, sans-serif;
+  font-family: 'Plus Jakarta Sans', 'Public Sans', Sora, sans-serif;
 
 }

@@ -5,10 +5,9 @@ import TodoList from "./components/TodoList";
 
 export default function Home() {
   return (
-    <div className="mx-125">
+    <div className="w-1/2 mx-auto">
       <Header />
       <Timer />
-      <TodoList />
     </div>
   );
 }
