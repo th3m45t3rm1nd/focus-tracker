@@ -1,15 +1,13 @@
 type TimerButtonProps = {
   onStart: () => void;
-  onPause: () => void;
-  onReset: () => void;
+  isRunning: boolean;
 }
 
-export default function TimerButtons({ onStart, onPause, onReset }: TimerButtonProps) {
+
+export default function TimerButtons({ onStart, isRunning }: TimerButtonProps) {
   return (
     <div>
-      <button className="bg-white m-2 font-bold py-5 px-11 rounded-lg border-3 shadow-[0_0_0_0] hover:shadow-[4px_6px_0_0] transition-duration-1000" onClick={onStart}>Start</button>
-      <button className="bg-white m-2 font-bold py-5 px-11 rounded-lg border-3 shadow-[0_0_0_0] hover:shadow-[4px_6px_0_0] transition-duration-1000" onClick={onPause}>Pause</button>
-      <button className="bg-white m-2 font-bold py-5 px-11 rounded-lg border-3 shadow-[0_0_0_0] hover:shadow-[4px_6px_0_0] transition-duration-1000" onClick={onReset}>Reset</button>
+      <button className={`min-w-24 m-3 p-6 font-mono font-semibold text-2xl text-center  rounded-lg border-3 shadow-[4px_6px_0_0_black] hover:shadow-[2px_3px_0_0_black] hover:translate-x-[2px] hover:translate-y-[3px] active:shadow-[0px_0px_0_0_black] active:translate-x-[4px] active:translate-y-[6px] cursor-pointer  transition-all duration-75 select-none ease-out transform-gpu ${isRunning ? 'bg-rose-300' : 'bg-emerald-300'} `} onClick={onStart}>{isRunning ? 'Pause' : 'Start'}</button>
     </div >
   )
 }
