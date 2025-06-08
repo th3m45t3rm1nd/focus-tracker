@@ -1,20 +1,40 @@
+import { useEffect, useState } from "react"
+import Todo from "./Todo"
+
+export interface TodoItem {
+  id: number,
+  taskName: string,
+  isCompleted: boolean,
+}
+
 export default function TodoList() {
-  const tasks = [
-    { taskName: "Complete Tasks", isCompleted: false },
-    { taskName: "Fuck You", isCompleted: true },
-  ]
+  const [tasks, setTasks] = useState<TodoItem[]>([])
+
+  useEffect(() => {
+    const fetchTodos = async () => {
+      try {
+        const response = await fetch("http://localhost:8080/todos")
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`)
+        }
+        const data = await response.json()
+        setTasks(data)
+      }
+      catch (err) {
+        console.log(err)
+      }
+    }
+    fetchTodos()
+  }, [])
+
+
   return (
     <div className="border-2 p-4 h-full  bg-rose-300 rounded-lg shadow-[4px_6px_0_0_black]">
       <ul className="">
         {
           tasks.map(task => (
-            <li className="">
-              <label className="flex items-center bg-yellow-100 border-3 my-4 p-4 rounded-lg hover:shadow-[2px_3px_0_0_black] hover:translate-x-[-2px] hover:translate-y-[-3px] transition-all ease-out transform-gpu cursor-pointer select-none">
-                <input
-                  type="checkbox"
-                  className="w-6 h-6 m-2 " />
-                <span className="text-xl">{task.taskName}</span>
-              </label>
+            <li key={task.id}>
+              <Todo task={task} />
             </li>
           ))
         }
