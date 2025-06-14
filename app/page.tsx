@@ -2,6 +2,7 @@
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Timer from "./components/Timer";
+import TodoInput from "./components/TodoInput";
 import TodoList from "./components/TodoList";
 
 export default function Home() {
