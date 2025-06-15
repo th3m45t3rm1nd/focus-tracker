@@ -62,8 +62,8 @@ export default function TodoList() {
 
 
   return (
-    <div className="relative p-4 h-full border-3 bg-rose-300 rounded-lg shadow-[4px_6px_0_0_black]">
-      <div className="">
+    <div className="flex flex-col max-h-[600] p-4 h-full border-3 bg-rose-300 rounded-lg shadow-[4px_6px_0_0_black]">
+      <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 p-2 min-h-0">
 
         <ul className="">
           {
@@ -85,7 +85,7 @@ export default function TodoList() {
         </ul>
       </div>
 
-      <div className="">
+      <div className="mt-auto ">
         <input
           type="text"
           value={inputValue}

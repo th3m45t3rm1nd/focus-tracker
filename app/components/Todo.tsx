@@ -14,7 +14,7 @@ export default function Todo({ task, toggleTasks, removeTask }: TodoProps) {
   //   console.log(task.isCompleted)
   // }
   return (
-    <div className="flex items-center bg-yellow-100 border-3 my-4 p-4 rounded-lg hover:shadow-[2px_3px_0_0_black] hover:translate-x-[-2px] hover:translate-y-[-3px] transition-all ease-out transform-gpu cursor-pointer select-none">
+    <div className="flex items-center bg-yellow-100 border-3 my-4 px-4 py-3 rounded-lg hover:shadow-[2px_3px_0_0_black] hover:translate-x-[-2px] hover:translate-y-[-3px] transition-all ease-out transform-gpu cursor-pointer select-none">
       <span className={`text-xl ${task.isCompleted ? 'line-through' : ''}`}>{task.taskName}</span>
       <div className="float-right">
         <button className="bg-emerald-400 font-mono font-semibold text-xl text-center p-3 m-3 border-3 border-black rounded-lg shadow-[3px_4px_0_0_black] hover:shadow-[2px_3px_0_0_black] hover:translate-x-[2px] hover:translate-y-[3px] active:shadow-[0px_0px_0_0_black] active:translate-x-[3px] active:translate-y-[4px] transition-all duration-75 ease-out select-none cursor-pointer transform-gpu" onClick={toggleTasks}>

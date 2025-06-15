@@ -27,5 +27,7 @@ module.exports = {
     },
   },
   // 3. Plugins (for adding custom utilities, components, etc.)
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar')
+  ],
 }
