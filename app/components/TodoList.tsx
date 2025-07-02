@@ -62,7 +62,7 @@ export default function TodoList() {
 
 
   return (
-    <div className="flex flex-col max-h-[600] p-4 h-full border-3 bg-rose-300 rounded-lg shadow-[4px_6px_0_0_black]">
+    <div className="flex flex-col max-h-[600] p-3 h-full border-3 bg-neutral-100 rounded-lg shadow-[4px_6px_0_0_black]">
       <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 p-2 min-h-0">
 
         <ul className="">
@@ -85,14 +85,14 @@ export default function TodoList() {
         </ul>
       </div>
 
-      <div className="mt-auto ">
+      <div className="mt-auto p-2">
         <input
           type="text"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           onKeyDown={handleKeyDown}
           placeholder="What are we doing today?"
-          className="w-full bg-yellow-100 p-4 text-xl border-3 rounded-lg "
+          className="w-full bg-slate-100 p-4 text-xl border-3 rounded-lg "
         />
       </div>
     </div>

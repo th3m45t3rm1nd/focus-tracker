@@ -16,10 +16,10 @@ export default function Timer() {
   const [currTimerOption, setCurrTimerOption] = useState<TimerOptions>(TimerOptions.Pomodoro)
 
   const statusColors = {
-    [TimerOptions.DeepWork]: 'h-full bg-yellow-300 shadow-[4px_6px_0_0] rounded-lg p-4 border-3 border-solid flex items-center justify-center flex-col',
-    [TimerOptions.Pomodoro]: 'h-full bg-yellow-200 shadow-[4px_6px_0_0] rounded-lg p-4 border-3 border-solid flex items-center justify-center flex-col',
-    [TimerOptions.ShortBreak]: 'h-full bg-cyan-300 shadow-[4px_6px_0_0] rounded-lg p-4 border-3 border-solid flex items-center justify-center flex-col',
-    [TimerOptions.LongBreak]: 'h-full bg-indigo-300 shadow-[4px_6px_0_0] rounded-lg p-4 border-3 border-solid flex items-center justify-center flex-col',
+    [TimerOptions.DeepWork]: 'h-full bg-neutral-100 shadow-[4px_6px_0_0] rounded-lg p-4 border-3 border-solid flex items-center justify-center flex-col ',
+    [TimerOptions.Pomodoro]: 'h-full bg-neutral-100 shadow-[4px_6px_0_0] rounded-lg p-4 border-3 border-solid flex items-center justify-center flex-col',
+    [TimerOptions.ShortBreak]: 'h-full bg-neutral-100 shadow-[4px_6px_0_0] rounded-lg p-4 border-3 border-solid flex items-center justify-center flex-col',
+    [TimerOptions.LongBreak]: 'h-full bg-neutral-100 shadow-[4px_6px_0_0] rounded-lg p-4 border-3 border-solid flex items-center justify-center flex-col',
   } as const
 
   function startTimer() {
