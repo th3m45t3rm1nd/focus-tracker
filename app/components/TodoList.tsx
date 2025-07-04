@@ -62,8 +62,8 @@ export default function TodoList() {
 
 
   return (
-    <div className="flex flex-col max-h-[600] p-3 h-full border-3 bg-neutral-100 rounded-lg shadow-[4px_6px_0_0_black]">
-      <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 p-2 min-h-0">
+    <div className="flex flex-col  p-3 h-154 border-3 bg-neutral-100 rounded-lg shadow-[4px_6px_0_0_black]">
+      <div className="flex-1 overflow-y-auto scrollbar-thumb-gray-700 p-2 min-h-0">
 
         <ul className="">
           {

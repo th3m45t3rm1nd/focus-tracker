@@ -1,8 +1,8 @@
 import { useState } from "react"
-import TimerButtons from "./TimerButtons"
+import StartStopButtons from "./StartStopButtons"
 import TimerOptionsButtons from "./TimerOptionsButtons";
 
-enum TimerOptions {
+export enum TimerOptions {
   DeepWork,
   Pomodoro,
   ShortBreak,
@@ -88,6 +88,7 @@ export default function Timer() {
   return (
     <div className={statusColors[currTimerOption]}>
       <TimerOptionsButtons
+        currTimerOption={currTimerOption}
         toDeepWork={toDeepWork}
         toPomodoro={toPomodoro}
         toShortBreak={toShortBreak}
@@ -99,7 +100,7 @@ export default function Timer() {
         :
         <h3 className="text-9xl font-mono font-semibold py-9 [font-variant-numeric:tabular-nums]">{minStr}:{secStr}</h3>
       }
-      <TimerButtons
+      <StartStopButtons
         onStart={startTimer}
         isRunning={isRunning}
       />
